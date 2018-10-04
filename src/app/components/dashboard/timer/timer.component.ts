@@ -61,6 +61,7 @@ export class TimerComponent implements OnInit {
       this.log.emit(result);
     })
     console.log(this.list);
+    this.singleTime.time = '';
     this.refreshTimer();
   }
 
