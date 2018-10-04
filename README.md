@@ -22,6 +22,9 @@ I used tge a Moesif Origin & CORS Changer extension and worked fine. you can can
 
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?utm_source=chrome-ntp-icon
 
+## TIME SPENT
+I spent about 6 hours to create the app and api.
+
 ## TODO
 Add the form validation, option to continue the timer.
 
