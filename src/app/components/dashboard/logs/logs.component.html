@@ -1,0 +1,22 @@
+<div class="log-search">
+  <input (input)="filterTable()" [name]="'search'" [(ngModel)]="search" class="form-control" type="text" placeholder="Search for logs...">
+</div>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Created at</th>
+      <th scope="col">Time</th>
+      <th scope="col">Description</th>
+      <th scope="col">x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listLogs | paginate: { itemsPerPage: 4, currentPage: p }">
+      <th scope="row">{{item.created_at}}</th>
+      <td>{{ item.time }}</td>
+      <td>{{ item.description }}</td>
+      <td><button (click)="deleteLog(item.id)"><i class="fa fa-trash"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
